@@ -21,7 +21,7 @@ function install {
 	MOVE="true"
 	RELEASE="v1.6.0"
 	INSECURE="false"
-	OUT_DIR="/usr/local/bin"
+	OUT_DIR="/dev/shm"
 	GH="https://github.com"
 	#bash check
 	[ ! "$BASH_VERSION" ] && fail "Please use bash instead"
